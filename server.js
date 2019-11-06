@@ -29,6 +29,54 @@ app.get("/soccerview/:id", function(req, res){
       });
     
 });
+
+
+app.post('/editdeatilteam', function (req, res) {
+  var socc = req.body.socid;  
+  var ids = req.body.ID;
+  var name= req.body.Name;
+  var loc = req.body.Location;
+  var sta = req.body.Stadium;
+  
+   MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("SoccerTeams");
+    var query = {id : socc }
+    var myobj = {  
+      Team : [{ id : ids,
+        Name :name,
+        Location:loc,
+        Stadium :sta
+      }]
+     };
+     dbo.collection("soccer").updateOne(query , myobj, function (err, result) {
+      if (err) throw err;
+      console.log("1 document updated");
+      db.close();
+      res.redirect("/soccerview/".socc);
+    });
+  });
+
+});
+
+
+app.get("/adddetail/:id", function(req, res){
+  var socc = req.params.id;  
+    // Get the calss detail from mongodb
+    MongoClient.connect(url, options,function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("SoccerTeams");
+        var query = {id : socc};
+                  dbo.collection("soccer").findOne(query,function(err, result) {
+          if (err) throw err;
+          console.log(result);res.render('pages/adddetail',{soc:result});
+          db.close();
+        });
+      });
+    
+});
+
+
 app.get("/soccer", function(req, res){
   //Get data from MongoDB
   
@@ -58,6 +106,22 @@ app.get("/socceredit/:id", function(req, res){
     });
   });
 });
+
+app.get("/soccerdelete/:ID", function (req, res) {
+  var ids = req.params.ID;
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("SoccerTeams");
+    var myquery = { id:ids};
+    dbo.collection("soccer").deleteOne(myquery, function(err, obj) {
+      if (err) throw err;
+      console.log("1 document deleted");
+      db.close();
+      res.redirect("/soccer");
+    });
+  });
+});
+
 
 app.post('/editLeague', function (req, res) {
   var ids = req.body.ID;
