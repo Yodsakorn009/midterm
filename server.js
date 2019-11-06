@@ -1,11 +1,13 @@
 var express = require('express');
+var bodyparser = require('body-parser');
 var app = express();
 //setup mongodb
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var options =  { useNewUrlParser: true , useUnifiedTopology: true } ;
-
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
 //set the view engine to ejs
 app.set('view engine','ejs');
 
@@ -42,24 +44,65 @@ app.get("/soccer", function(req, res){
       });
   });
 });
+
+app.get("/socceredit/:id", function(req, res){
+  var socc = req.params.id;  
+  MongoClient.connect(url, options,function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("SoccerTeams");
+    var query = {id : socc};
+              dbo.collection("soccer").findOne(query,function(err, result) {
+      if (err) throw err;
+      console.log(result);res.render('pages/edit',{soc:result});
+      db.close();
+    });
+  });
+});
+
+app.post('/editLeague', function (req, res) {
+  var ids = req.body.ID;
+  var leagues= req.body.League;
+  var seasons = req.body.Season;
+  MongoClient.connect(url, options, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("SoccerTeams");
+    var myquery = { id : ids  };
+    var newvalues = {
+      $set: {
+        id : ids,
+        League: leagues,
+        Season: seasons,
+        Team : []
+      }
+    };
+    dbo.collection("soccer").updateOne(myquery, newvalues, function (err, result) {
+      if (err) throw err;
+      console.log("1 document updated");
+      db.close();
+      res.redirect("/soccer");
+    });
+  });
+});
+
 app.get("/socceradd", function(req, res){
   res.render('pages/add');
 });
 
-app.post('/addLeagueadd', function (req, res) {
-  var ids = req.body.id;
-  var Leagues= req.body.League;
-  var Seasons = req.body.Season;
 
-  MongoClient.connect(url, function(err, db) {
+app.post('/addleague', function (req, res) {
+  var ids = req.body.ID;
+  var leagues= req.body.League;
+  var seasons = req.body.Season;
+   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("SoccerTeams");
-    var sdsj = {  id : ids,
-      League: Leagues,
-      Season: Seasons,
-      Team:[]
+    var myobj = {  
+        id : ids,
+      League: leagues,
+      Season: seasons,
+      Team : []
      };
-    dbo.collection("soccer").insertOne(sdsj, function(err, result) {
+    dbo.collection("soccer").insertOne(myobj, function(err, result) {
       if (err) throw err;
       console.log("1 document inserted");
       db.close();
