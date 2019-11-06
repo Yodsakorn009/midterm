@@ -1,0 +1,262 @@
+1
+{
+    "_id" : ObjectId("5d9e9db982772e67b5d7b710"),
+    "id" : "101",
+    "League" : "La Liga",
+    "Season" : "2019",
+    "Team" : [ 
+        {
+            "id" : "1",
+            "Name" : "Alavés",
+            "Location" : "Vitoria-Gasteiz",
+            "Stadium" : "Mendizorrotza"
+        }, 
+        {
+            "id" : "2",
+            "Name" : "Athletic Bilbao",
+            "Location" : "Bilbao",
+            "Stadium" : "San Mamés"
+        }, 
+        {
+            "id" : "3",
+            "Name" : "Atlético Madrid",
+            "Location" : "Madrid",
+            "Stadium" : "Wanda Metropolitano"
+        }, 
+        {
+            "id" : "4",
+            "Name" : "Barcelona",
+            "Location" : "Barcelona",
+            "Stadium" : "Camp Nou"
+        }, 
+        {
+            "id" : "5",
+            "Name" : "Celta Vigo",
+            "Location" : "Vigo",
+            "Stadium" : "Abanca-Balaídos"
+        }, 
+        {
+            "id" : "6",
+            "Name" : "Eibar",
+            "Location" : "Eibar",
+            "Stadium" : "Ipurua"
+        }, 
+        {
+            "id" : "7",
+            "Name" : "Espanyol",
+            "Location" : "Cornellà de Llobregat",
+            "Stadium" : "RCDE Stadium"
+        }, 
+        {
+            "id" : "8",
+            "Name" : "Getafe",
+            "Location" : "Getafe",
+            "Stadium" : "Coliseum Alfonso Pérez"
+        }, 
+        {
+            "id" : "9",
+            "Name" : "Granada",
+            "Location" : "Granada",
+            "Stadium" : "Nuevo Los Cármenes"
+        }, 
+        {
+            "id" : "10",
+            "Name" : "Leganés",
+            "Location" : "Leganés",
+            "Stadium" : "Butarque"
+        }, 
+        {
+            "id" : "11",
+            "Name" : "Levante",
+            "Location" : "Valencia",
+            "Stadium" : "Ciutat de València"
+        }, 
+        {
+            "id" : "12",
+            "Name" : "Mallorca",
+            "Location" : "Palma",
+            "Stadium" : "Son Moix"
+        }, 
+        {
+            "id" : "13",
+            "Name" : "Osasuna",
+            "Location" : "Pamplona",
+            "Stadium" : "El Sadar"
+        }, 
+        {
+            "id" : "14",
+            "Name" : "Real Betis",
+            "Location" : "Seville",
+            "Stadium" : "Benito Villamarín"
+        }, 
+        {
+            "id" : "15",
+            "Name" : "Real Madrid",
+            "Location" : "Madrid",
+            "Stadium" : "Santiago Bernabéu"
+        }, 
+        {
+            "id" : "16",
+            "Name" : "Real Sociedad",
+            "Location" : "San Sebastián",
+            "Stadium" : "Reale Seguros Stadium"
+        }, 
+        {
+            "id" : "17",
+            "Name" : "Sevilla",
+            "Location" : "Seville",
+            "Stadium" : "Ramón Sánchez Pizjuán"
+        }, 
+        {
+            "id" : "18",
+            "Name" : "Valencia",
+            "Location" : "Valencia",
+            "Stadium" : "Mestalla"
+        }, 
+        {
+            "id" : "19",
+            "Name" : "Valladolid",
+            "Location" : "Valladolid",
+            "Stadium" : "José Zorrilla"
+        }, 
+        {
+            "id" : "20",
+            "Name" : "Villarreal",
+            "Location" : "Villarreal",
+            "Stadium" : "stadio de la Cerámica"
+        }
+    ]
+}
+
+
+2
+
+
+{
+    "_id" : ObjectId("5dbed70ebd38578295b1a6a8"),
+    "id" : "102",
+    "League" : "Premier League",
+    "Season" : "2019",
+    "Team" : [ 
+        {
+            "id" : "1",
+            "Name" : "Arsenal",
+            "Location" : "London (Holloway)",
+            "Stadium" : "Emirates Stadium"
+        }, 
+        {
+            "id" : "2",
+            "Name" : "Aston Villa",
+            "Location" : "Birmingham",
+            "Stadium" : "Villa Park"
+        }, 
+        {
+            "id" : "3",
+            "Name" : "Bournemouth",
+            "Location" : "Bournemouth",
+            "Stadium" : "Dean Court"
+        }, 
+        {
+            "id" : "4",
+            "Name" : "Brighton & Hove Albion",
+            "Location" : "Brighton",
+            "Stadium" : "Falmer Stadium"
+        }, 
+        {
+            "id" : "5",
+            "Name" : "Burnley",
+            "Location" : "Burnley",
+            "Stadium" : "Turf Moor"
+        }, 
+        {
+            "id" : "6",
+            "Name" : "Chelsea",
+            "Location" : "London (Fulham)",
+            "Stadium" : "Stamford Bridge"
+        }, 
+        {
+            "id" : "7",
+            "Name" : "Crystal Palace",
+            "Location" : "London (Selhurst)",
+            "Stadium" : "Selhurst Park"
+        }, 
+        {
+            "id" : "8",
+            "Name" : "Everton",
+            "Location" : "Liverpool (Walton)",
+            "Stadium" : "Goodison Park"
+        }, 
+        {
+            "id" : "9",
+            "Name" : "Leicester City",
+            "Location" : "Leicester",
+            "Stadium" : "King Power Stadium"
+        }, 
+        {
+            "id" : "10",
+            "Name" : "Liverpool",
+            "Location" : "Liverpool (Anfield)",
+            "Stadium" : "Anfield"
+        }, 
+        {
+            "id" : "11",
+            "Name" : "Manchester City",
+            "Location" : "Manchester",
+            "Stadium" : "City of Manchester Stadium"
+        }, 
+        {
+            "id" : "12",
+            "Name" : "Manchester United",
+            "Location" : "Manchester (Old Trafford)",
+            "Stadium" : "Old Trafford"
+        }, 
+        {
+            "id" : "13",
+            "Name" : "Newcastle United",
+            "Location" : "Newcastle upon Tyne",
+            "Stadium" : "St James' Park"
+        }, 
+        {
+            "id" : "14",
+            "Name" : "Norwich City",
+            "Location" : "Norwich",
+            "Stadium" : "Carrow Road"
+        }, 
+        {
+            "id" : "15",
+            "Name" : "Sheffield United",
+            "Location" : "Sheffield",
+            "Stadium" : "Bramall Lane"
+        }, 
+        {
+            "id" : "16",
+            "Name" : "Southampton",
+            "Location" : "Southampton",
+            "Stadium" : "St Mary's Stadium"
+        }, 
+        {
+            "id" : "17",
+            "Name" : "Tottenham Hotspur",
+            "Location" : "London (Tottenham)",
+            "Stadium" : "Tottenham Hotspur Stadium"
+        }, 
+        {
+            "id" : "18",
+            "Name" : "Watford",
+            "Location" : "Watford",
+            "Stadium" : "Vicarage Road"
+        }, 
+        {
+            "id" : "19",
+            "Name" : "West Ham United",
+            "Location" : "London (Stratford)",
+            "Stadium" : "London Stadium"
+        }, 
+        {
+            "id" : "20",
+            "Name" : "Wolverhampton Wanderers",
+            "Location" : "Wolverhampton",
+            "Stadium" : "Molineux Stadium"
+        }
+    ]
+}

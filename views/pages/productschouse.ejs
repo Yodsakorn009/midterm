@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h1>League</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td><h5>League</h5></td>
+                <td><h5>Season</h5></td>
+                <td><a class="btn btn-success" href="/socceradd" role="button">Add</a></td>     
+               
+        </thead>
+        <tbody>
+            <tr>
+                <% soc.forEach(function(T1){ %>
+            <tr>
+                <td><%=T1.League%></td>
+                <td><%=T1.Season%></td>
+                <td>
+                    <a class="btn btn-primary" href="/soccerview/<%=T1.id%>" role="button">view</a>
+                    <a class="btn btn-success" href="/socceredit/<%=T1.id%>" role="button">edit</a>
+                    <a class="btn btn-danger" href="/soccerdelete/<%=T1.id%>" role="button">delete</a>
+                </td>
+                
+
+            </tr>
+            <%});%>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<% include ../partials/footer %>

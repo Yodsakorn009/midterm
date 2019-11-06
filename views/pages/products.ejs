@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <h1><%= soc.League %> <%= soc.Season %></h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>     
+               </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <% soc.Team.forEach(function(T1){ %>
+            <tr>
+                <td><%=T1.id%></td>
+                <td><%=T1.Name%></td>
+                <td>
+                    <a class="btn btn-primary" href="/soccerdetail/<%=T1.id%>,<%= soc.id%>" role="button">view</a>
+                 
+                </td>
+
+            </tr>
+            <%});%>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<% include ../partials/footer %>

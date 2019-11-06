@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<div class="container">
+<h1>Add League</h1>
+  <form action="/addLeagueadd" method="POST">
+    <div class="form-group">
+      <label for="">id</label>
+      <input type="text" class="form-control" value="" name="id" id="id" aria-describedby="helpId"
+        placeholder="">  
+    </div>
+    <div class="form-group">
+      <label for="">League</label>
+      <input type="text" class="form-control" value="" name="League" id="League" aria-describedby="helpId" placeholder="">
+          </div>
+    <div class="form-group">
+      <label for="">Season</label>
+      <input type="text" class="form-control" value="" name="Season" id="Season" aria-describedby="helpId"
+        placeholder="">
+        </div>    
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+<% include ../partials/footer %>
